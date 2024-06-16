@@ -112,7 +112,7 @@ export default [...compat.extends(
         "@typescript-eslint/no-unsafe-return": "off",
         "@typescript-eslint/restrict-template-expressions": "off",
         "@typescript-eslint/no-require-imports": "error",
-        "@/keyword-spacing": "error",
+        "keyword-spacing": "error",
         "@typescript-eslint/no-namespace": "error",
         "@typescript-eslint/no-this-alias": "error",
         "@typescript-eslint/no-use-before-define": "off",
