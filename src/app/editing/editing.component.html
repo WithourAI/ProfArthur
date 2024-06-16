@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="left-container">
+    <div class="navigation-buttons">
+      <button mat-icon-button (click)="goBack()" [disabled]="currentEditingIndex <= 0">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-icon-button (click)="goForward()" [disabled]="currentEditingIndex >= editingHistory.length - 1">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+    <div class="confidence-score-counts">
+      <pre>{{ formatConfidenceScoreCounts() }}</pre>
+    </div>
+    <div class="player">
+      <div class="waveform-container">
+        <div *ngIf="!isWaveformVisible" class="spinner-overlay">
+          <ngx-spinner bdColor="rgba(0, 0, 0, 0.35)" size="medium" color="#fff" type="pacman"
+                       [fullScreen]="false"></ngx-spinner>
+        </div>
+        <div id="waveform"></div>
+        <div id="timeline"></div>
+      </div>
+      <div class="controls">
+        <button mat-icon-button (click)="togglePlayPause()">
+          <mat-icon>{{ isPlaying ? 'pause' : 'play_arrow' }}</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="rating-container">
+      <div class="description-textbox">
+        <textarea autosize readonly i18n="@@description-textbox">
+The text content might have inconsistent encoding within a single document. Delete any parts with erroneous encoding.
+
+Remove all content that lacks corresponding audio segments, such as titles, markers, instructions, and comments. However, leave onomatopoeia intact.
+
+Rate your editing on a scale of 1 to 5 stars based on the following criteria:
+
+1 star: Edited without listening to the audio. Removed titles, markers, comments, etc.
+2 stars: Skimmed through the audio.
+3 stars: Roughly verified that each line has a corresponding audio segment.
+4 stars: Listened to the audio and corrected the text line by line.
+5 stars: Carefully listened to the audio and corrected the text word by word.
+
+Use submit button to submit an editing, skip button to randomly skip to another editing, and mismatch button to mark the editing as a audio text mismatch.
+
+Note:
+- If you are unsure about the correctness of the text, rate it lower.
+- In the editor, you can hold shift-alt and mouse left key to select vertically. Useful for scenarios like deleting timestamps.
+- You can skip special symbols like ♡, those will be removed when doing post processing.</textarea>
+      </div>
+      <div class="star-rating">
+        <star-rating [starType]="'svg'" [size]="'large'" [hoverEnabled]="true"
+                     [rating]="confidence_score" (ratingChange)="onRatingChange($event)"></star-rating>
+      </div>
+      <div class="submit-buttons">
+        <button mat-raised-button color="primary" (click)="submitEditing()" i18n="@@submit-button">Submit</button>
+        <button mat-raised-button color="warn" (click)="skipEditing()" i18n="@@skip-button">Skip</button>
+        <button mat-raised-button color="accent" (click)="markAsMismatch()" i18n="@@mismatch-button">Mismatch</button>
+      </div>
+    </div>
+  </div>
+  <div class="editor">
+    <ngx-codemirror [options]="editorConfig" [(ngModel)]="editedText"></ngx-codemirror>
+  </div>
+</div>

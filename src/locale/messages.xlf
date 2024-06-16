@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="description-textbox" datatype="html">
+        <source>The text content might have inconsistent encoding within a single document. Delete any parts with erroneous encoding.
+
+Remove all content that lacks corresponding audio segments, such as titles, markers, instructions, and comments. However, leave onomatopoeia intact.
+
+Rate your editing on a scale of 1 to 5 stars based on the following criteria:
+
+1 star: Edited without listening to the audio. Removed titles, markers, comments, etc.
+2 stars: Skimmed through the audio.
+3 stars: Roughly verified that each line has a corresponding audio segment.
+4 stars: Listened to the audio and corrected the text line by line.
+5 stars: Carefully listened to the audio and corrected the text word by word.
+
+Use submit button to submit an editing, skip button to randomly skip to another editing, and mismatch button to mark the editing as a audio text mismatch.
+
+Note:
+- If you are unsure about the correctness of the text, rate it lower.
+- In the editor, you can hold shift-alt and mouse left key to select vertically. Useful for scenarios like deleting timestamps.
+- You can skip special symbols like ♡, those will be removed when doing post processing.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/editing/editing.component.html</context>
+          <context context-type="linenumber">31,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="submit-button" datatype="html">
+        <source>Submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/editing/editing.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skip-button" datatype="html">
+        <source>Skip</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/editing/editing.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mismatch-button" datatype="html">
+        <source>Mismatch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/editing/editing.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

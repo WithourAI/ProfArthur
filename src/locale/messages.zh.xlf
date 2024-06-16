@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="zh">
+    <body>
+      <trans-unit id="description-textbox" datatype="html">
+        <source>The text content might have inconsistent encoding within a single document. Delete any parts with erroneous encoding.
+
+Remove all content that lacks corresponding audio segments, such as titles, markers, instructions, and comments. However, leave onomatopoeia intact.
+
+Rate your editing on a scale of 1 to 5 stars based on the following criteria:
+
+1 star: Edited without listening to the audio. Removed titles, markers, comments, etc.
+2 stars: Skimmed through the audio.
+3 stars: Roughly verified that each line has a corresponding audio segment.
+4 stars: Listened to the audio and corrected the text line by line.
+5 stars: Carefully listened to the audio and corrected the text word by word.
+
+Use submit button to submit an editing, skip button to randomly skip to another editing, and mismatch button to mark the editing as a audio text mismatch.
+
+Note:
+- If you are unsure about the correctness of the text, rate it lower.
+- In the editor, you can hold shift-alt and mouse left key to select vertically. Useful for scenarios like deleting timestamps.
+- You can skip special symbols like ♡, those will be removed when doing post processing.</source>
+        <target>单个文档中的文本内容可能存在编码不一致（社团为了让不同地区的用户都能阅读台本）的情况。请删除任何存在错误编码（乱码）的部分。
+
+请删除所有缺少相应音频片段的内容，如标题、标记、说明和注释的同时保留拟声词（如ふふっ､ あ～）之类的不变。
+
+根据以下标准，按1到5星对你的编辑进行评分：
+
+1星：没有听音频的情况下进行的编辑，如简单删除了标题、标记、注释等。
+2星：快速浏览了音频。
+3星：大致验证每行都有相应的音频片段。
+4星：听了音频，并逐行校正文本。
+5星：仔细听了音频，逐字校正文本。
+
+使用提交按钮提交编辑，使用跳过按钮随机跳到下一个编辑，使用不匹配按钮将编辑标记为音频文本完全不匹配。
+
+注意：
+- 如果你不确定文本的正确性，请给出较低的评分。
+- 在编辑器中，你可以按住Shift-Alt键和鼠标左键进行垂直选择，这对删除时间戳等场景可能有用。
+- 在编辑时可以跳过如♡之类的特殊符号，这些符号会在后处理阶段被移除。</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/editing/editing.component.html</context>
+          <context context-type="linenumber">31,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="submit-button" datatype="html">
+        <source>Submit</source>
+        <target>提交</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/editing/editing.component.html</context><context context-type="linenumber">56</context></context-group></trans-unit>
+      <trans-unit id="skip-button" datatype="html">
+        <source>Skip</source>
+        <target>跳过</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/editing/editing.component.html</context><context context-type="linenumber">57</context></context-group></trans-unit>
+      <trans-unit id="mismatch-button" datatype="html">
+        <source>Mismatch</source>
+        <target>不匹配</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/editing/editing.component.html</context><context context-type="linenumber">58</context></context-group></trans-unit>
+    </body>
+  </file>
+</xliff>

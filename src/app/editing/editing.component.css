@@ -1,0 +1,145 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    background-image: url('../../assets/images/Miku_3rd_Anniversary.webp');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto 30vh;
+}
+
+
+#waveform {
+    height: 128px;
+    position: relative;
+    width: 100%;
+}
+
+.waveform-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 90vh;
+    width: 90vw;
+    padding: 0;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensures it takes available space */
+    margin-right: 20px;
+    height: 100%; /* Makes sure it uses the entire vertical space available */
+}
+
+.navigation-buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.navigation-buttons button {
+    margin-right: 10px;
+}
+
+.navigation-buttons button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.confidence-score-counts {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(1px);
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    font-family: monospace;
+    font-size: 18px;
+    color: #333;
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: 40px;
+}
+
+.confidence-score-counts pre{
+    margin-bottom: 0;
+}
+
+.player {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    height: 260px;
+    margin-top: 20px;
+}
+
+.controls {
+    margin-top: 10px; /* Adjust this value to control the space between the timeline and the controls */
+}
+
+.spinner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.editor {
+    flex: 1;
+    margin-top: 2vh;
+    margin-left: auto;
+    overflow-y: auto;
+}
+
+.CodeMirror {
+    height: auto;
+}
+
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.description-textbox {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.description-textbox textarea {
+    width: 100%;
+    resize: none;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: rgba(249, 249, 249, 0.5);
+    backdrop-filter: blur(1px);
+}
+
+.star-rating {
+    margin-bottom: 10px;
+}
+
+.submit-button {
+    align-self: center;
+}
